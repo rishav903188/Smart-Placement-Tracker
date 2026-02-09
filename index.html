@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Placement Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Internship Tracker</h1>
+
+  <form id="appForm">
+    <input type="text" id="company" placeholder="Company Name" required>
+    <input type="text" id="role" placeholder="Role / Position" required>
+
+    <select id="stage">
+      <option>Applied</option>
+      <option>Online Assessment (OA)</option>
+      <option>Technical Interview</option>
+      <option>HR Interview</option>
+      <option>Offer</option>
+      <option>Rejected</option>
+    </select>
+
+    <select id="result">
+      <option>Pending</option>
+      <option>Cleared</option>
+      <option>Rejected</option>
+    </select>
+
+    <input type="date" id="date" required>
+
+    <button type="submit">Add Application</button>
+  </form>
+
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Role</th>
+        <th>Stage</th>
+        <th>Result</th>
+        <th>Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="appList"></tbody>
+  </table>
+
+  
+  <div id="summary">
+    <p>Total Applications: <span id="total"></span></p>
+    <p>Offers: <span id="offers"></span></p>
+    <p>Rejections: <span id="rejections"></span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
