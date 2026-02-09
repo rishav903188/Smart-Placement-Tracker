@@ -36,6 +36,9 @@ function deleteApp(index) {
 
 function updateSummary() {
   document.getElementById("total").innerText = applications.length;
+  document.getElementById("interviews").innerText = applications.filter(
+    (app) => app.stage === "Interview",
+  ).length;
   document.getElementById("offers").innerText = applications.filter(
     (app) => app.stage === "Offer",
   ).length;

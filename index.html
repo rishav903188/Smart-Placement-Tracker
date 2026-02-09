@@ -6,8 +6,9 @@
 </head>
 <body>
 
-  <h1>Internship Tracker</h1>
+  <h1>Smart Placement / Internship Tracker</h1>
 
+  <!-- FORM -->
   <form id="appForm">
     <input type="text" id="company" placeholder="Company Name" required>
     <input type="text" id="role" placeholder="Role / Position" required>
@@ -15,8 +16,7 @@
     <select id="stage">
       <option>Applied</option>
       <option>Online Assessment (OA)</option>
-      <option>Technical Interview</option>
-      <option>HR Interview</option>
+      <option>Interview</option>
       <option>Offer</option>
       <option>Rejected</option>
     </select>
@@ -32,7 +32,7 @@
     <button type="submit">Add Application</button>
   </form>
 
-  
+  <!-- LIST -->
   <table>
     <thead>
       <tr>
@@ -47,9 +47,10 @@
     <tbody id="appList"></tbody>
   </table>
 
-  
+  <!-- SUMMARY -->
   <div id="summary">
     <p>Total Applications: <span id="total"></span></p>
+    <p>Interviews: <span id="interviews"></span></p>
     <p>Offers: <span id="offers"></span></p>
     <p>Rejections: <span id="rejections"></span></p>
   </div>
