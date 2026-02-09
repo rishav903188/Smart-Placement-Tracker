@@ -1,60 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Smart Placement Tracker</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Smart Internship Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Smart Placement / Internship Tracker</h1>
+    <header>
+        <h1>Smart Internship Tracker</h1>
+    </header>
 
-  <!-- FORM -->
-  <form id="appForm">
-    <input type="text" id="company" placeholder="Company Name" required>
-    <input type="text" id="role" placeholder="Role / Position" required>
+    
+    <section class="form-section">
+        <form id="applicationForm">
+            <input type="text" id="company" placeholder="Company Name" required>
+            <input type="text" id="role" placeholder="Role / Position" required>
 
-    <select id="stage">
-      <option>Applied</option>
-      <option>Online Assessment (OA)</option>
-      <option>Interview</option>
-      <option>Offer</option>
-      <option>Rejected</option>
-    </select>
+            <select id="stage" required>
+                <option value="Applied">Applied</option>
+                <option value="Online Assessment">Online Assessment</option>
+                <option value="Interview">Interview</option>
+                <option value="Offer">Offer</option>
+                <option value="Rejected">Rejected</option>
+            </select>
 
-    <select id="result">
-      <option>Pending</option>
-      <option>Cleared</option>
-      <option>Rejected</option>
-    </select>
+            <select id="result" required>
+                <option value="Pending">Pending</option>
+                <option value="Cleared">Cleared</option>
+                <option value="Rejected">Rejected</option>
+            </select>
 
-    <input type="date" id="date" required>
+            <input type="date" id="date" required>
 
-    <button type="submit">Add Application</button>
-  </form>
+            <button type="submit">Save Application</button>
+        </form>
+    </section>
 
-  <!-- LIST -->
-  <table>
-    <thead>
-      <tr>
-        <th>Company</th>
-        <th>Role</th>
-        <th>Stage</th>
-        <th>Result</th>
-        <th>Date</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody id="appList"></tbody>
-  </table>
+    
+    <section class="table-section">
+        <table>
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Stage</th>
+                    <th>Result</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="applicationList"></tbody>
+        </table>
+    </section>
 
-  <!-- SUMMARY -->
-  <div id="summary">
-    <p>Total Applications: <span id="total"></span></p>
-    <p>Interviews: <span id="interviews"></span></p>
-    <p>Offers: <span id="offers"></span></p>
-    <p>Rejections: <span id="rejections"></span></p>
-  </div>
+    <section class="summary-section">
+        <div>Total Applications: <span id="totalCount">0</span></div>
+        <div>Interviews: <span id="interviewCount">0</span></div>
+        <div>Offers: <span id="offerCount">0</span></div>
+        <div>Rejections: <span id="rejectionCount">0</span></div>
+    </section>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
